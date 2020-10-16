@@ -41,6 +41,6 @@ def testFace(img):
         face = detect_result.data[i].pos
         cv2.rectangle(image, (face.x, face.y), (face.x + face.width, face.y + face.height), (255, 0, 0), 2)
 
-    cv2.imshow("s", image)
-    cv2.waitKey(0)
+    cv2.imwrite("./static/images/test.jpg", image)
+    # cv2.waitKey(0)
 

@@ -50,6 +50,7 @@ def face():
     if request.method == 'POST':
         upload_path = upload()
         testFace(upload_path)
+        return render_template('faceResult.html', userinput=testFace(upload_path), val1=time.time())
     return render_template('face.html')
 
 @app.route('/')
